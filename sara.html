@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <title>sara</title>
+</head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url(background.png);
+    
+}
+
+.container .box{
+    height: 86vh;
+    width: 75%;
+    padding: 0 20px;
+    background-color: rgb(255, 255,255, 0.1);
+    z-index: 10;
+    border: 2px rgb(255, 255, 255,0.7);
+    border-radius: 20px;
+    display: flex;
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10,10,10,0.15);
+    flex-direction: row-reverse;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: #c1d9fb;
+    transform: translate(490px,150px);
+    border-radius: 50%;
+}
+.container .box nav{
+    height: 7%;
+    width: 95%;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px auto;
+    padding: 20px;
+
+}
+.container .box nav ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.container .box nav ul li a{
+    text-decoration: non;
+    font-size: 14px;
+    color: #242329;
+    transition: 0.4s;
+}
+.container .box nav ul li a{
+    color:#7c8bd1;
+}
+
+nav .logo {
+    font-size: 35px;
+    font-family: "Oi", serif;
+font-style: normal;
+    color: #8980b7;
+    margin-top: 30px;
+    margin-right: 55px;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+nav .logo:hover{
+    transform: scale(1.7);
+text-shadow: #000;
+}
+.container .box .contains{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center;
+}
+.container .box .contains .section-1{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 75px;
+    margin-right: 40px;
+    padding: 40px;
+    font-family: serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+
+}
+.container .box .contains .section-1 h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #242329;
+}
+
+.container .box .contains .section-1 h3{
+color: #6f34fe;
+font-size: 24pxz;
+margin-bottom: 10px;
+}
+
+.container .box .contains .section-1 p{
+font-size: 20px;
+color: #505052;
+margin-bottom: 50px;
+text-align:right;
+}
+.container .box .contains .section-1 btn{
+padding: 15px 20px;
+background-color: #6f34fe;
+border: 1px solid #6f34fe;
+color: #fff;
+border-radius: 5px;
+font-weight: 500;
+text-decoration: none;
+transition: 0.3s;
+}
+.contains .section-1 btn:hover{
+    background-color: #fff;
+    color: #6f34fe;
+
+}
+.contains .section-2{
+    width: 40%;
+    margin-right: 30px;
+    margin-left:60px;
+}
+.contains .section-2 img{
+    width: 100%;
+}
+
+.contains .sction-3 {
+    display: flex;
+    flex-direction: row; /* تغيير الاتجاه إلى أفقي */
+    justify-content: space-between;
+    align-items: center;
+    margin-top :180px ;
+    margin-right: 80px;
+    gap: 55px; /* مسافة بين الأيقونات */
+    position: absolute;
+    font-size: 40px; /* تكبير حجم الأيقونات */
+    color: #735c5c; /* لون الأيقونات */
+    transition: 0.3s ease;
+}
+
+.contains .sction-3 a i {
+    color: #340d8f;
+    font-size: 40px; /* الحجم النهائي للأيقونات */
+    transition: transform 0.3s ease;
+}
+
+.contains .sction-3 a i:hover {
+    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+    color:#8980b7; /* لون عند التمرير */
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .container .box {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .contains {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+    .container .contains .section-2 {
+        flex: 1 1 100%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .container .contains .section-1 h1 {
+        font-size: 2rem;
+    }
+
+    .container .contains .section-1 p {
+        font-size: 1rem;
+    }
+
+    .sction-3 a i {
+        font-size: 1.5rem;
+    }
+}
+
+/* استجابة للشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .container .box {
+        max-width: 1200px;
+    }
+
+    .container .contains .section-1 h1 {
+        font-size: 3rem;
+    }
+
+    .container .contains .section-1 p {
+        font-size: 1.5rem;
+    }
+
+    .sction-3 a i {
+        font-size: 2.5rem;
+    }
+}
+
+
+</style>
+
+<body>
+<div class="container">
+    <div class="box">
+        <nav>
+           
+            <a href="#" class="logo">عبدالمجيد إبراهيم</a>
+            
+           
+    
+        </nav>
+
+        <div class="contains">
+            <div class="section-1">
+              <h1>أهلًا .. أنا سارة</h1>
+               <h3>مسوّقة سعودية شغوفة بالإبداع والابتكار في عالم التسويق</h3>
+              <p>أمتلك خبرة تزيد عن 5 سنوات في بناء استراتيجيات تسويقية مبتكرة لتحقيق أهداف العلامات التجارية أسعى دائمًا لدمج التقنية مع الأفكار الإبداعية       
+                <br>. لتقديم تجربة مميزة للعملاء </p>    
+                  
+                <a href="#" class="btn" > </a>
+            </div>
+            <div class="section-2">
+                 <img src="user.png" alt="">
+            </div>
+            <div class="sction-3">
+                <a href="#" ><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="#" ><i class="fab fa-instagram"></i></a>
+                <a href="#" ><i class="fab fa-whatsapp"></i> </a>
+                <a href="#" ><i class="fab fa-facebook"></i> </a>
+                <a href="#" ><i class="fab fa-linkedin"></i> </a>
+
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+</body>
+</html>
