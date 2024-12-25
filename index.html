@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
     <title>sara</title>
 </head>
 <style>
@@ -79,12 +79,20 @@
 nav .logo {
     font-size: 35px;
     font-family: "Oi", serif;
-font-style: normal;
+    font-style: normal;
     color: #8980b7;
     margin-top: 30px;
     margin-right: 55px;
     text-decoration: none;
     transition: 0.4s ease;
+}
+@media (max-width: 600px){
+    nav .logo {
+        margin: 0;
+        font-size: 5px;
+    }
+
+
 }
 nav .logo:hover{
     transform: scale(1.7);
@@ -180,12 +188,53 @@ transition: 0.3s;
 
 /* استجابة للشاشات الصغيرة */
 @media (max-width: 768px) {
+    body {
+        
+        display: flex; /* تفعيل Flexbox */
+        justify-content: center; /* توسيط العناصر أفقيًا */
+        align-items: center; /* توسيط العناصر عموديًا (اختياري) */
+        min-height: 100vh; /* ضمان استخدام الارتفاع الكامل للصفحة */
+        margin: 0; /* إزالة الهوامش الافتراضية */
+       
+       
+    }
+    
+      .container
+        {
+          
+           
+            display: flex;
+            justify-content: center;
+            align-content: space-evenly;
+            overscroll-behavior-y:none;
+        }
+        .box{
+           margin-top: 10px;
+           margin-bottom: 10px;
+            width:400px;
+      max-width: 600px;
+      align-items: center;
+      height: 100vh;
+    
+   
+  
+        }
+        .container::after{
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: #c1d9fb;
+    transform: translate(-100px,0px);
+    border-radius: 50%;
+}
+    
     .container .box {
         flex-direction: column;
         height: auto;
     }
 
-    .container .contains {
+    .container .box .contains {
         flex-direction: column;
         align-items: center;
     }
@@ -197,27 +246,53 @@ transition: 0.3s;
         text-align: center;
     }
 
-    .container .contains .section-1 h1 {
-        font-size: 2rem;
+    .container .contains .section-1{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .container .contains .section-1 p {
         font-size: 1rem;
+        margin-top: 20px;
+        
     }
+  
+.container .box .logo{
+    font-size: 30px;
+    text-align: center;
+    margin-right:50px;
+   
+}
+.container .box .contains .section-1 h1{
+    font-size: 22px;
+    margin: 30px;
+    text-align: center;
+}
+.container .box .contains .sction-3 {
+    gap: 5px;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.container .box .contains .sction-3 a i {
+        font-size:2rem;
+        margin-top: 200px;
+        margin-left: 50px;
+       
 
-    .sction-3 a i {
-        font-size: 1.5rem;
-    }
+
 }
 
-/* استجابة للشاشات الكبيرة */
-@media (min-width: 1200px) {
+
+@media (max-width: 600px) {
+
+
     .container .box {
         max-width: 1200px;
     }
 
     .container .contains .section-1 h1 {
-        font-size: 3rem;
+        font-size: 1rem;
     }
 
     .container .contains .section-1 p {
@@ -237,7 +312,7 @@ transition: 0.3s;
     <div class="box">
         <nav>
            
-            <a href="#" class="logo">ســارة الـحــربــي</a>
+            <a href="#" class="logo">سـارة الــحـربـــي</a>
             
            
     
